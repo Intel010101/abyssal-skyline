@@ -1,21 +1,25 @@
 # Abyssal Skyline (WIP)
 
-This is the early prototype for **Abyssal Skyline**, a neon-drenched isometric runner rendered fully in WebGL (Three.js). Right now it contains:
+WebGL prototype for an isometric neon runner. Latest build adds:
 
-- Procedural megacity spine with animated platform segments.
-- Hovercraft player rig with lane swapping, aerial vault, and burst draft.
-- Ion-thread pickups that feed the lattice energy meter.
-- Formation placeholders (electro-arc squads) moving through the lane space.
-- HUD overlay wired to live game state.
-- Touch + keyboard controls.
+- Spiral / bloom enemy formations with behaviour scripts
+- Rail vault nodes that trigger combo + lattice bonuses
+- Fog + lighting tweaks, richer trail FX
+- HUD timestamp showing build version
 
-## Tech stack
+## Controls
+
+- **Lane shift:** Arrow keys / A-D / swipe left-right
+- **Vault:** Space / tap
+- **Burst:** Shift (consumes lattice energy)
+
+## Stack
 
 - Vanilla ES modules
 - Three.js r162
-- No build step required – runs as static files
+- No bundler (static files)
 
-## Local dev
+## Run locally
 
 ```bash
 python3 -m http.server 4173
@@ -23,12 +27,10 @@ python3 -m http.server 4173
 npx serve
 ```
 
-Then open http://localhost:4173/ in a modern browser (desktop or mobile). The prototype is pre-alpha; expect placeholder assets and unfinished balance.
+Visit `http://localhost:4173`.
 
 ## Roadmap
 
-- Enemy AI behaviours for spiral/bloom formations
-- Rail vault system that adds vertical play
-- Screen-space post-processing (bloom, aberration, glitch)
-- Persistent upgrades + meta progression
-- Audio pass (sfx + music)
+- Audio pass (ambience + SFX)
+- Persistent progression layer
+- HUD overlays for rail bonuses

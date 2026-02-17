@@ -45,6 +45,12 @@ canvas {
   min-width: 110px;
   backdrop-filter: blur(12px);
   text-align: center;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat[data-alert="true"] {
+  border-color: #ff4d7a;
+  box-shadow: 0 0 18px rgba(255, 77, 122, 0.35);
 }
 
 .stat .label {
@@ -58,6 +64,10 @@ canvas {
 .stat span:last-child {
   font-size: 1.2rem;
   font-weight: 600;
+}
+
+.stat[data-alert="true"] span:last-child {
+  color: #ffd6e3;
 }
 
 .cta {
