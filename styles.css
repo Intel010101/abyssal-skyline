@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap');
+
+:root {
+  --glass: rgba(9, 12, 22, 0.55);
+  --border: rgba(255, 255, 255, 0.2);
+  --text: #f3f7ff;
+  --accent: #63ffd9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  background: #020409;
+  overflow: hidden;
+  color: var(--text);
+}
+
+canvas {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+}
+
+.hud {
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 5;
+}
+
+.stat {
+  background: var(--glass);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 10px 16px;
+  min-width: 110px;
+  backdrop-filter: blur(12px);
+  text-align: center;
+}
+
+.stat .label {
+  display: block;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.stat span:last-child {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.cta {
+  position: fixed;
+  bottom: 16px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 5;
+}
+
+.cta p {
+  background: var(--glass);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 10px 24px;
+  letter-spacing: 0.08em;
+}
+
+@media (max-width: 640px) {
+  .hud {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .stat {
+    width: calc(100vw - 32px);
+  }
+}

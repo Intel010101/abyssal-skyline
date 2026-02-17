@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abyssal Skyline (WIP)</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Prototype build of Abyssal Skyline, an isometric neon runner built on WebGL." />
+</head>
+<body>
+  <canvas id="scene"></canvas>
+  <section class="hud">
+    <div class="stat">
+      <span class="label">Altitude</span>
+      <span id="altitude">0m</span>
+    </div>
+    <div class="stat">
+      <span class="label">Lattice</span>
+      <span id="lattice">0%</span>
+    </div>
+    <div class="stat">
+      <span class="label">Combo</span>
+      <span id="combo">x1.0</span>
+    </div>
+    <div class="stat">
+      <span class="label">Build</span>
+      <span id="build">pre-alpha</span>
+    </div>
+  </section>
+  <section class="cta">
+    <p>Swipe / WASD to strafe. Space to vault. Shift to burst.</p>
+  </section>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
